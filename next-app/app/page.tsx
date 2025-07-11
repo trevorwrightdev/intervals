@@ -5,11 +5,11 @@ export default function Home() {
             style={{ background: 'var(--dark-bg)' }}
         >
             <h1 className='text-4xl md:text-5xl font-bold mb-4 text-white text-center'>
-                Intervals
+                intervals
             </h1>
             <p className='text-lg md:text-xl text-white mb-8 max-w-xl text-center'>
-                A web app + Discord bot that helps you track how you are using
-                your time. Get pinged every x minutes, reply with what you did,
+                a web app + discord bot that helps you track how you are using
+                your time. get pinged every x minutes, reply with what you did,
                 and check the web app for smart insights on your time.
             </p>
             <button
