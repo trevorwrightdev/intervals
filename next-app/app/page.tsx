@@ -1,3 +1,5 @@
+import { Button } from '../components/Button'
+
 export default function Home() {
     return (
         <main
@@ -12,12 +14,7 @@ export default function Home() {
                 your time. get pinged every x minutes, reply with what you did,
                 and check the web app for smart insights on your time.
             </p>
-            <button
-                className='bg-[--purple-3] hover:bg-[--purple-4] text-white text-lg font-semibold px-8 py-3 rounded-full shadow-md transition-colors duration-200 outline-none focus:ring-2 focus:ring-[--purple-2] focus:ring-offset-2 focus:ring-offset-[--dark-bg]'
-                type='button'
-            >
-                get started
-            </button>
+            <Button type='button'>get started</Button>
         </main>
     )
 }
