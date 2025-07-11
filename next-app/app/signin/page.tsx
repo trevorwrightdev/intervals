@@ -1,13 +1,20 @@
 'use client'
 
 import { DiscordLogoIcon } from '@phosphor-icons/react'
-import { Button } from '../../components/Button'
-import { createClient } from '../../lib/supabase/client'
+import { Button } from '@/components/Button'
+import { createClient } from '@/lib/supabase/client'
+import { getBaseUrl } from '@/lib/utils'
 
 export default function SignIn() {
+    console.log(getBaseUrl() + '/auth/callback')
     const handleSignIn = async () => {
         const supabase = createClient()
-        await supabase.auth.signInWithOAuth({ provider: 'discord' })
+        await supabase.auth.signInWithOAuth({
+            provider: 'discord',
+            options: {
+                redirectTo: `${getBaseUrl()}/auth/callback`,
+            },
+        })
     }
 
     return (
