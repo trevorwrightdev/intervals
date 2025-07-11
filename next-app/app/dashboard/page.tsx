@@ -8,7 +8,7 @@ export default async function DashboardPage() {
         redirect('/signin')
     }
     return (
-        <div className='flex-1 w-full flex flex-col items-center justify-center'>
+        <div className='flex-1 w-full flex flex-col items-center justify-center pt-12'>
             <h1 className='font-bold text-3xl'>dashboard</h1>
         </div>
     )
