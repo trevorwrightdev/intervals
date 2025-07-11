@@ -1,6 +1,10 @@
+'use client'
+
+import { useRouter } from 'next/navigation'
 import { Button } from '../components/Button'
 
 export default function Home() {
+    const router = useRouter()
     return (
         <main
             className='min-h-screen flex flex-col items-center justify-center px-4'
@@ -14,7 +18,9 @@ export default function Home() {
                 your time. get pinged every x minutes, reply with what you did,
                 and check the web app for smart insights on your time.
             </p>
-            <Button type='button'>get started</Button>
+            <Button type='button' onClick={() => router.push('/dashboard')}>
+                get started
+            </Button>
         </main>
     )
 }
